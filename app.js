@@ -7,4 +7,9 @@ app.get('/', (req, res) => {
 	res.send('Hello World! The update is live');
 });
 
+app.get('/teapot', (req, res) => {
+    res.set('X-my-header', 'cubswin')
+    res.status(418).send('I\'m a little teapot')
+})
+
 app.listen(port, () => console.log(`Example app running on PORT ${port}`));
